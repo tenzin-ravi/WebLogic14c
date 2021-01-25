@@ -51,4 +51,4 @@ domain_host_volume
 
 echo "docker run -d -p 9001:${adminport} -p 9002:9002 --name ${adminhost} --hostname ${adminhost} -v ${scriptDir}/properties:/u01/oracle/properties -v ${domainhostvol}:/u01/oracle/user_projects/domains ${ENV_ARG} 12213-weblogic-domain-in-volume"
 
-docker run --network=host -p 9001:${adminport} -p 9002:9002 --name ${adminhost} --hostname ${adminhost} -e ADMIN_PASSWORD=tc4linux -v ${scriptDir}/properties:/u01/oracle/properties -v ${domainhostvol}:/u01/oracle/user_projects/domains ${ENV_ARG} 14110
+docker run --network=host -p 9001:${adminport} -p 9002:9002 --name ${adminhost} --hostname ${adminhost} -e ADMIN_PASSWORD={password} -v ${scriptDir}/properties:/u01/oracle/properties -v ${domainhostvol}:/u01/oracle/user_projects/domains ${ENV_ARG} 14110
